@@ -1,0 +1,45 @@
+object FrmLogin: TFrmLogin
+  Left = 0
+  Top = 0
+  Caption = 'Login'
+  ClientHeight = 600
+  ClientWidth = 800
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnResize = FormResize
+  DesignerMasterStyle = 0
+  object LayoutCircle: TLayout
+    Align = Contents
+    Size.Width = 800.000000000000000000
+    Size.Height = 600.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Circle: TCircle
+      Align = Center
+      Fill.Color = claGreenyellow
+      Margins.Right = 1200.000000000000000000
+      Size.Width = 1200.000000000000000000
+      Size.Height = 1200.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object AnimationCircle: TFloatAnimation
+        AnimationType = InOut
+        Duration = 1.500000000000000000
+        Interpolation = Cubic
+        OnFinish = AnimationCircleFinish
+        PropertyName = 'Margins.Bottom'
+        StartValue = 1200.000000000000000000
+        StopValue = -1200.000000000000000000
+      end
+    end
+  end
+  object Button1: TButton
+    Position.X = 24.000000000000000000
+    Position.Y = 32.000000000000000000
+    TabOrder = 1
+    Text = 'Button1'
+    OnClick = Button1Click
+  end
+end
